@@ -1,13 +1,19 @@
+
+import os
+import random
+
 from flask import (
     Flask, request, session,
     render_template_string, redirect, url_for
 )
-import random
 
 app = Flask(__name__)
 
-# Session security key for this local learning project
-app.secret_key = "innocent-secret-game-2026"
+# Secure session key for Render deployment
+app.secret_key = os.environ.get(
+    "SECRET_KEY",
+    "local-development-key"
+)
 
 
 # Website design (HTML + CSS)
@@ -239,17 +245,11 @@ def restart():
     return redirect(url_for("home"))
 
 
-# Run the website
+# Run locally; Gunicorn imports app without executing this block
 if __name__ == "__main__":
 
     app.run(
         host="0.0.0.0",
-        port=5000,
+        port=int(os.environ.get("PORT", 5000)),
         debug=False
     )
-    import os
-
-app.secret_key = os.environ.get(
-    "SECRET_KEY",
-    "local-development-key"
-)
