@@ -220,7 +220,7 @@ def home():
 
                 else:
                     session["message"] = (
-                        "🏆 CONGRATULATIONS! YOU WON!"
+                        "🏆 CONGRATULATIONS!YOU WON!Feel the energy of being a winner and next time you find difficulty in accessing, contact the developers at opokinnocent4@gmail.com"
                     )
                     session["won"] = True
 
