@@ -21,7 +21,7 @@ HTML = """
 <!DOCTYPE html>
 <html>
 <head>
-    <title>INNOCENT SECRET GAME</title>
+    <title>IN@IR SECRET GAME</title>
 
     <meta name="viewport"
           content="width=device-width, initial-scale=1">
@@ -115,7 +115,7 @@ HTML = """
 
 <div class="game">
 
-    <h1>🎮 INNOCENT SECRET GAME</h1>
+    <h1>🎮 IN@IR SECRET GAME</h1>
 
     <div class="number">🔢</div>
 
@@ -134,7 +134,7 @@ HTML = """
             type="number"
             name="guess"
             min="1"
-            max="20"
+            max="4"
             placeholder="Enter your guess"
             required
         >
@@ -168,7 +168,7 @@ HTML = """
     <div class="footer">
         Developed with Python and Flask
         <br>
-        INNOCENT SECRET GAME
+        IN@IR SECRET GAME
     </div>
 
 </div>
@@ -210,12 +210,12 @@ def home():
 
                 if guess < secret:
                     session["message"] = (
-                        "📉 Too low! Try a higher number."
+                        "📉 ohh number too low😁! Try a higher number."
                     )
 
                 elif guess > secret:
                     session["message"] = (
-                        "📈 Too high! Try a lower number."
+                        "📈 ohh number too high😁! Try a lower number."
                     )
 
                 else:
