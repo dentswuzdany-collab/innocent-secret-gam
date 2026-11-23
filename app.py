@@ -123,7 +123,7 @@ HTML = """
         I have selected a secret number
         between 1 and 20.
         <br>
-        Can you guess the number?
+        Test your logic by guesing the number😁?
     </p>
 
     {% if not won %}
@@ -134,7 +134,7 @@ HTML = """
             type="number"
             name="guess"
             min="1"
-            max="4"
+            max="20"
             placeholder="Enter your guess"
             required
         >
